@@ -1,1 +1,6 @@
-<p>new-task works!</p>
+<h2>Adicionar nova tarefa:</h2>
+
+<form [formGroup]="newTaskForm" (ngSubmit)="setNewTask()">
+    <input type="text" placeholder="add details" formControlName="name">
+    <button type="submit">Add</button>
+</form>
