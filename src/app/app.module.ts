@@ -5,10 +5,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,
