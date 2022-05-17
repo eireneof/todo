@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NewTaskComponent } from './components/new-task/new-task.component';
+import { TodoComponent } from './pages/todo/todo.component';
 
 const routes: Routes = [
   {
-    path: 'new-task',
-    component: NewTaskComponent
+    path: 'main',
+    component: TodoComponent
   }
 ];
 
