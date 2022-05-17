@@ -1,0 +1,35 @@
+table {
+    border-collapse: separate !important;
+}
+
+.font {
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+.td-checkbox {
+    width: 2rem;
+}
+
+.task-completed {
+    text-decoration: line-through;
+}
+
+.icon {
+    color: #BDBDBD;
+    font-size: 1.125;
+}
+
+.mat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons {
+    font-size: 1.2rem;
+}
+
+.btn-text {
+    font-size: 0.75rem;
+}
