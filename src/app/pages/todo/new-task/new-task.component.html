@@ -1,26 +1,10 @@
-<h2>Adicionar nova tarefa:</h2>
-
-<form [formGroup]="newTaskForm" (ngSubmit)="handleSetNewTaskAtForm()">
-    <input type="text" placeholder="add details" formControlName="name">
-    <button type="submit">Add</button>
+<form  class="d-flex flex-row justify-content-between mb-4" [formGroup]="newTaskForm" (ngSubmit)="handleSetNewTaskAtForm()">
+    <input class="form-input w-75 py-2 px-3 me-2" type="text" placeholder="add details" formControlName="name">
+    <button class="w-25 btn btn-primary btn-text" type="submit">Add</button>
 </form>
 
 <div>
     <div *ngIf="!tasks?.length">
         <p>Sem tasks ainda :(</p>
-    </div>
-    <div *ngIf="tasks?.length">
-        <table>
-            <tr>
-                <th>Nome</th>
-                <th>Status</th>
-                <th>----</th>
-            </tr>
-            <tr *ngFor="let task of tasks">
-                <td>{{task.name}}</td>
-                <td>{{task.isCompleted}}</td>
-                <td><input type="checkbox"(click)="updateTaskIsCompleted(task.taskId)" ></td>
-            </tr>
-        </table>
     </div>
 </div>
