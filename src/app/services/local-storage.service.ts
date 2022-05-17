@@ -15,6 +15,10 @@ export class LocalStorageService {
     return this.keyName;
   }
 
+  localStorageExist(): boolean {
+    return this.storage[this.getKeyName()];
+  }
+
   set(value: any): boolean {
     if (this.storage) {
       this.storage.setItem(this.keyName, JSON.stringify(value));
@@ -24,9 +28,15 @@ export class LocalStorageService {
   }
 
   get(): any {
-    if (this.storage) {
+    if (this.localStorageExist()) {
       return JSON.parse(this.storage.getItem(this.keyName) || '');
     }
     return null;
+  }
+
+  clear(): void {
+    if (this.localStorageExist()) {
+      this.storage.removeItem(this.keyName);
+    }
   }
 }
