@@ -1,0 +1,17 @@
+.btn-link {
+    text-decoration: none;
+    color: #333333;
+
+    &:hover, &:focus,&:focus-visible,&:active{
+        cursor: pointer;
+        border-bottom: 2px solid rgb(60, 24, 168);
+    }
+}
+
+.btn-check:focus + .btn, .btn:focus {
+    box-shadow: none;
+}
+
+.text-size {
+    font-size: 0.875;
+}

@@ -1,0 +1,16 @@
+<section class="d-flex flex-row justify-content-between col-8 m-auto">
+  <button class="btn btn-link text-size" (click)="changeTasksTypesSelected('all')">
+    All
+  </button>
+  <button class="btn btn-link text-size" (click)="changeTasksTypesSelected('active')">
+    Active
+  </button>
+  <button class="btn btn-link text-size" (click)="changeTasksTypesSelected('completed')">
+    Completed
+  </button>
+</section>
+<section class="d-flex flex-column justify-content-center col-10 m-auto mt-0">
+  <hr />
+  <app-new-task></app-new-task>
+  <app-task-list [selectedTasksType]="tasksTypesSelected"></app-task-list>
+</section>
