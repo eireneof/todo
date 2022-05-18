@@ -4,8 +4,12 @@ import { TodoComponent } from './pages/todo/todo.component';
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: 'home',
     component: TodoComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'home'
   }
 ];
 
